@@ -117,6 +117,7 @@ public class SignUpOne extends JFrame {
         setVisible(true);
         setTitle("Personal Information");
         // this is the trial for the GitHub
+        // trial 2
 
 
     }
