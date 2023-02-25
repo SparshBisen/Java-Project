@@ -135,10 +135,5 @@ public class SignUpOne extends JFrame {
         setVisible(true);
         setTitle("Personal Information");
 
-
-
-        // THIS PROJECT IS BEING CONSTRUCTED AND THERE ARE LOT AREAS WHICH ARE SUPPOSED
-        // TO BE OPTIMIZED AND IT WILL BE DONE AFTER ALL THE REQUIRED FILES ARE CREATED OF THIS PROJECT.
-        // Thank You
     }
 }
