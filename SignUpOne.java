@@ -214,7 +214,7 @@ public class SignUpOne extends JFrame implements ActionListener {
                 // since we are manipulating the data in SQL so, we have to run a DML command and that is insert command
                 // here we are establishing the connection with the database and the Conn file with SignUp file.
                 // basically the signup file is connected with the sql workbench and conn file is connected to signup file
-            }
+            } // checking
         } catch (Exception e){
             System.out.println(e);
         }
