@@ -2,6 +2,8 @@ package BankManagementSystem;
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
+import com.toedter.calendar.JDateChooser;
+// this will help in creating the calendar part in the dob field area.
 
 public class SignUpOne extends JFrame {
     public static void main(String[] args) {
@@ -50,6 +52,10 @@ public class SignUpOne extends JFrame {
         dob.setBounds(100,240,300,30);
         add(dob);
 
+        JDateChooser dateChooser = new JDateChooser();
+        dateChooser.setBounds(300,240,400,30);
+        dateChooser.setForeground(new Color(105,105,105));
+        add(dateChooser);
 
         JLabel gender = new JLabel("Gender: ");
         gender.setFont(new Font("Raleway",Font.BOLD,22));
