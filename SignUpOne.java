@@ -76,7 +76,7 @@ public class SignUpOne extends JFrame {
         address.setBounds(100,440,200,30);
         add(address);
 
-        JLabel addressTextField = new JLabel();
+        JTextField addressTextField = new JTextField();
         addressTextField.setBounds(300, 440,400,30);
         addressTextField.setFont(new Font("Arial", Font.BOLD, 22));
         add(addressTextField);
@@ -86,7 +86,7 @@ public class SignUpOne extends JFrame {
         city.setBounds(100,490,200,30);
         add(city);
 
-        JLabel cityTextField = new JLabel();
+        JTextField cityTextField = new JTextField();
         cityTextField.setBounds(300, 490,400,30);
         cityTextField.setFont(new Font("Arial", Font.BOLD, 22));
         add(cityTextField);
@@ -96,7 +96,7 @@ public class SignUpOne extends JFrame {
         state.setBounds(100,540,200,30);
         add(state);
 
-        JLabel stateTextField = new JLabel();
+        JTextField stateTextField = new JTextField();
         stateTextField.setBounds(300,540,400,30);
         stateTextField.setFont(new Font("Arial", Font.BOLD, 22));
         add(stateTextField);
@@ -106,7 +106,7 @@ public class SignUpOne extends JFrame {
         pincode.setBounds(100,590,200,30);
         add(pincode);
 
-        JLabel pincodeTextField = new JLabel();
+        JTextField pincodeTextField = new JTextField();
         pincodeTextField.setBounds(300,590,400,30);
         pincodeTextField.setFont(new Font("Arial", Font.BOLD, 22));
         add(pincodeTextField);
@@ -116,8 +116,6 @@ public class SignUpOne extends JFrame {
         setLocation(350,10);
         setVisible(true);
         setTitle("Personal Information");
-
-
 
     }
 }
