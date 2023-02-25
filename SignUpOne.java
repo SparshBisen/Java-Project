@@ -132,7 +132,7 @@ public class SignUpOne extends JFrame implements ActionListener {
 
         addressTextField = new JTextField();
         addressTextField.setBounds(300, 440,400,30);
-        addressTextField.setFont(new Font("Arial", Font.BOLD, 22));
+        addressTextField.setFont(new Font("Arial", Font.BOLD, 14));
         add(addressTextField);
 
         city = new JLabel("City: ");
@@ -142,7 +142,7 @@ public class SignUpOne extends JFrame implements ActionListener {
 
         cityTextField = new JTextField();
         cityTextField.setBounds(300, 490,400,30);
-        cityTextField.setFont(new Font("Arial", Font.BOLD, 22));
+        cityTextField.setFont(new Font("Arial", Font.BOLD, 14));
         add(cityTextField);
 
         state = new JLabel("State: ");
@@ -152,7 +152,7 @@ public class SignUpOne extends JFrame implements ActionListener {
 
         stateTextField = new JTextField();
         stateTextField.setBounds(300,540,400,30);
-        stateTextField.setFont(new Font("Arial", Font.BOLD, 22));
+        stateTextField.setFont(new Font("Arial", Font.BOLD, 14));
         add(stateTextField);
 
         pincode = new JLabel("PIN Code: ");
@@ -162,18 +162,19 @@ public class SignUpOne extends JFrame implements ActionListener {
 
         pincodeTextField = new JTextField();
         pincodeTextField.setBounds(300,590,400,30);
-        pincodeTextField.setFont(new Font("Arial", Font.BOLD, 22));
+        pincodeTextField.setFont(new Font("Arial", Font.BOLD, 14));
         add(pincodeTextField);
 
-        next = new JButton();
-        next.setBackground(Color.DARK_GRAY);
-        next.setForeground(Color.BLACK);
+        next = new JButton("NEXT");
+        next.setBackground(Color.BLACK);
+        next.setForeground(Color.WHITE);
         next.setFont(new Font("Ralway", Font.BOLD, 14));
         next.setBounds(620,660,80,30);
+        next.addActionListener(this);
         add(next);
 
         getContentPane().setBackground(Color.LIGHT_GRAY);
-        setSize(850,700);
+        setSize(850,850);
         setLocation(350,10);
         setVisible(true);
         setTitle("Personal Information");
@@ -181,6 +182,42 @@ public class SignUpOne extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae){
         String formno = "" + Random;// Here we have to convert the random value to string, so we have added "".
         String name =  nameTextField.getText(); // with the help of getText we can take out the value of
+        String fname = fnameTextField.getText();
+        String dob = ((JTextField) dateChooser.getDateEditor().getUiComponent()).getText();
+        String gender = null;
+        if(male.isSelected()){
+            gender = "Male";
+        } else if(female.isSelected()){
+            gender = "Female";
+        }
+        String email = emailTextField.getText();
+        String marital = null;
+        if(married.isSelected()){
+            marital = "Married";
+        } else if(unmarried.isSelected()){
+            marital = "Unmarried";
+        } else if(other.isSelected()){
+            marital = "Other";
+        }
+        String address = addressTextField.getText();
+        String city = cityTextField.getText();
+        String pincode = pincodeTextField.getText();
+        String state = stateTextField.getText();
+
+        try{
+            if(name.equals("") || address.equals("") || city.equals("") || pincode.equals("") || state.equals("")){
+                JOptionPane.showMessageDialog(null, "Please fill all the Details.");
+                // this will help in giving a message if the all the areas is not filled.
+            } else {
+                Conn c = new Conn();
+                String query = "";
+                // here we are establishing the connection with the database and the Conn file with SignUp file.
+                // basically the signup file is connected with the sql workbench and conn file is connected to signup file
+            }
+        } catch (Exception e){
+            System.out.println(e);
+        }
+
     }
 
     public static void main(String[] args) {
