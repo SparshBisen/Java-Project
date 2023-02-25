@@ -55,12 +55,24 @@ public class SignUpOne extends JFrame {
         JDateChooser dateChooser = new JDateChooser();
         dateChooser.setBounds(300,240,400,30);
         dateChooser.setForeground(new Color(105,105,105));
+        // to add color in RGB you have to create new color class and then put the value of the color.
         add(dateChooser);
 
         JLabel gender = new JLabel("Gender: ");
         gender.setFont(new Font("Raleway",Font.BOLD,22));
         gender.setBounds(100,290,200,30);
         add(gender);
+
+        JRadioButton male = new JRadioButton("Male");
+        male.setBounds(300,290,60,30);
+        add(male);
+        JRadioButton female = new JRadioButton("Female");
+        male.setBounds(450,290,60,30);
+        add(female);
+        JRadioButton prefer = new JRadioButton("Prefer not to say");
+        prefer.setBounds(590,290,60,30);
+        add(prefer);
+        // JRadioButton help to create the option to select in the field of Gender.
 
         JLabel email = new JLabel("Email Address: ");
         email.setFont(new Font("Raleway",Font.BOLD,22));
