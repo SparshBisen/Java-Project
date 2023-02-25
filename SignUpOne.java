@@ -65,14 +65,24 @@ public class SignUpOne extends JFrame {
 
         JRadioButton male = new JRadioButton("Male");
         male.setBounds(300,290,60,30);
+        male.setBackground(Color.LIGHT_GRAY);
         add(male);
         JRadioButton female = new JRadioButton("Female");
         female.setBounds(400,290,120,30);
+        female.setBackground(Color.LIGHT_GRAY);
         add(female);
         JRadioButton prefer = new JRadioButton("Prefer not to say");
         prefer.setBounds(560,290,160,30);
+        prefer.setBackground(Color.LIGHT_GRAY);
         add(prefer);
         // JRadioButton help to create the option to select in the field of Gender.
+
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(male);
+        genderGroup.add(female);
+        genderGroup.add(prefer);
+        // there was an issue that all the button were getting selected, whereas only
+        // one button is supposed to be selected, so we have use ButtonGroup class object.
 
         JLabel email = new JLabel("Email Address: ");
         email.setFont(new Font("Raleway",Font.BOLD,22));
@@ -88,6 +98,25 @@ public class SignUpOne extends JFrame {
         marital.setFont(new Font("Raleway",Font.BOLD,22));
         marital.setBounds(100,390,200,30);
         add(marital);
+
+        JRadioButton married = new JRadioButton("Married");
+        married.setBounds(300,390,100,30);
+        married.setBackground(Color.LIGHT_GRAY);
+        add(married);
+        JRadioButton unmarried = new JRadioButton("Unmarried");
+        unmarried.setBounds(450,390,100,30);
+        unmarried.setBackground(Color.LIGHT_GRAY);
+        add(unmarried);
+        JRadioButton other = new JRadioButton("Others");
+        other.setBounds(630,390,100,30);
+        other.setBackground(Color.LIGHT_GRAY);
+        add(other);
+
+        ButtonGroup maritalGroup = new ButtonGroup();
+        maritalGroup.add(married);
+        maritalGroup.add(unmarried);
+        maritalGroup.add(other);
+        // here same process is done for the marital field.
 
         JLabel address = new JLabel("Address: ");
         address.setFont(new Font("Raleway",Font.BOLD,22));
