@@ -3,22 +3,20 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 import com.toedter.calendar.JDateChooser;
+import java.awt.event.*;
 // this will help in creating the calendar part in the dob field area.
 
-public class SignUpOne extends JFrame {
-    public static void main(String[] args) {
-        new SignUpOne();
-    }
+public class SignUpOne extends JFrame implements ActionListener {
+
+    // All the objects are now being globally declared.
+    long Random;
+    JTextField nameTextField, fnameTextField, emailTextField, addressTextField, cityTextField, stateTextField, pincodeTextField;
+    JLabel formno, personalDetails, name, fname, dob,gender, email, marital, address, city, state, pincode;
+    JRadioButton male, female, prefer, married, unmarried, other;
+    JDateChooser dateChooser;
+    JButton next;
 
     SignUpOne(){  // here for every action we have a same step and that is to create constructor.
-
-        // All the objects are now being globally declared.
-        long Random;
-        JTextField nameTextField, fnameTextField, emailTextField, addressTextField, cityTextField, stateTextField, pincodeTextField;
-        JLabel formno, personalDetails, name, fname, dob,gender, email, marital, address, city, state, pincode;
-        JRadioButton male, female, prefer, married, unmarried, other;
-        JDateChooser dateChooser;
-        JButton next;
 
         setLayout(null);
         Random ran = new Random();
@@ -179,5 +177,13 @@ public class SignUpOne extends JFrame {
         setLocation(350,10);
         setVisible(true);
         setTitle("Personal Information");
+    }
+    public void actionPerformed(ActionEvent ae){
+        String formno = "" + Random;// Here we have to convert the random value to string, so we have added "".
+        String name =  nameTextField.getText(); // with the help of getText we can take out the value of
+    }
+
+    public static void main(String[] args) {
+        new SignUpOne();
     }
 }
