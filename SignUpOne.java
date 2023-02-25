@@ -67,10 +67,10 @@ public class SignUpOne extends JFrame {
         male.setBounds(300,290,60,30);
         add(male);
         JRadioButton female = new JRadioButton("Female");
-        male.setBounds(450,290,60,30);
+        female.setBounds(400,290,120,30);
         add(female);
         JRadioButton prefer = new JRadioButton("Prefer not to say");
-        prefer.setBounds(590,290,60,30);
+        prefer.setBounds(560,290,160,30);
         add(prefer);
         // JRadioButton help to create the option to select in the field of Gender.
 
